@@ -1,8 +1,11 @@
+import json
 from pathlib import Path
 
 import pytest
 
 from gendiff import generate_diff
+from gendiff.diff import build_diff
+from gendiff.parser import parse_file
 
 TEST_DATA_DIR = Path(__file__).parent / 'test_data'
 
@@ -27,3 +30,13 @@ def test_generate_diff_nested(extension):
     expected = read_test_data('nested_stylish_expected.txt')
 
     assert generate_diff(file_path1, file_path2) == expected
+
+
+def test_generate_diff_json_format():
+    file_path1 = TEST_DATA_DIR / 'file1_nested.json'
+    file_path2 = TEST_DATA_DIR / 'file2_nested.json'
+    expected = build_diff(parse_file(file_path1), parse_file(file_path2))
+
+    result = generate_diff(file_path1, file_path2, 'json')
+
+    assert json.loads(result) == expected

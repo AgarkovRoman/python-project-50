@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 from gendiff.cli import build_parser, main
@@ -33,3 +34,18 @@ def test_main_prints_diff(monkeypatch, capsys):
 
     captured = capsys.readouterr()
     assert captured.out.strip() == expected.strip()
+
+
+def test_main_prints_json_diff(monkeypatch, capsys):
+    file_path1 = str(TEST_DATA_DIR / 'file1.json')
+    file_path2 = str(TEST_DATA_DIR / 'file2.json')
+    monkeypatch.setattr(
+        'sys.argv',
+        ['gendiff', file_path1, file_path2, '--format', 'json'],
+    )
+
+    main()
+
+    captured = capsys.readouterr()
+    diff = json.loads(captured.out)
+    assert isinstance(diff, list)

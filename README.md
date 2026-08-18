@@ -47,3 +47,6 @@ print(diff)
 
 ### Nested structures
 [![asciicast](https://asciinema.org/a/2u5DmPHJVXB8fyJT.svg)](https://asciinema.org/a/2u5DmPHJVXB8fyJT)
+
+### JSON output format
+[![asciicast](https://asciinema.org/a/2QonsRgTpHf8EFK8.svg)](https://asciinema.org/a/2QonsRgTpHf8EFK8)
