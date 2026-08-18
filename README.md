@@ -39,4 +39,8 @@ print(diff)
 
 ## Demo
 
+### JSON
 [![asciicast](https://asciinema.org/a/v7Spes9XFErGwFxy.svg)](https://asciinema.org/a/v7Spes9XFErGwFxy)
+
+### YAML
+[![asciicast](https://asciinema.org/a/o5HSjSO2HiU403tP.svg)](https://asciinema.org/a/o5HSjSO2HiU403tP)
