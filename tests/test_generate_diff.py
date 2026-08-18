@@ -18,3 +18,12 @@ def test_generate_diff_flat(extension):
     expected = read_test_data('flat_stylish_expected.txt')
 
     assert generate_diff(file_path1, file_path2) == expected
+
+
+@pytest.mark.parametrize('extension', ['json', 'yml'])
+def test_generate_diff_nested(extension):
+    file_path1 = TEST_DATA_DIR / f'file1_nested.{extension}'
+    file_path2 = TEST_DATA_DIR / f'file2_nested.{extension}'
+    expected = read_test_data('nested_stylish_expected.txt')
+
+    assert generate_diff(file_path1, file_path2) == expected

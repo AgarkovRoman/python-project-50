@@ -44,3 +44,6 @@ print(diff)
 
 ### YAML
 [![asciicast](https://asciinema.org/a/o5HSjSO2HiU403tP.svg)](https://asciinema.org/a/o5HSjSO2HiU403tP)
+
+### Nested structures
+[![asciicast](https://asciinema.org/a/2u5DmPHJVXB8fyJT.svg)](https://asciinema.org/a/2u5DmPHJVXB8fyJT)
