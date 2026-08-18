@@ -2,6 +2,7 @@
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/AgarkovRoman/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AgarkovRoman/python-project-50/actions)
+[![Python CI](https://github.com/AgarkovRoman/python-project-50/actions/workflows/check.yml/badge.svg)](https://github.com/AgarkovRoman/python-project-50/actions)
 
 «Gendiff» compares two configuration files and shows the difference
 between them.
